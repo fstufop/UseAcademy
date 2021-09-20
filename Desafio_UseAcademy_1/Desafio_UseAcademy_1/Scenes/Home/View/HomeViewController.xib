@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Desafio_UseAcademy_1" customModuleProvider="target">
+            <connections>
+                <outlet property="startButtonView" destination="38o-pL-38B" id="S01-B9-r00"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="welcomeView" destination="cA8-I5-vw4" id="KRS-iU-8bA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cA8-I5-vw4">
+                    <rect key="frame" x="20" y="264" width="374" height="210"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perguntas e respostas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Jc-7m-vTT">
+                            <rect key="frame" x="20" y="20" width="334" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Xqe-GX-wuU"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            <color key="textColor" red="0.45802152159999998" green="0.54811394209999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Responda 10 perguntas e veja sua pontuação no fim!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP7-If-2Oz">
+                            <rect key="frame" x="20" y="70" width="334" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="aIt-cA-8th"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38o-pL-38B">
+                            <rect key="frame" x="20" y="120" width="334" height="70"/>
+                            <color key="backgroundColor" red="0.45802152159999998" green="0.54811394209999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="zjO-75-OLK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <state key="normal" title="Start!">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="38o-pL-38B" firstAttribute="leading" secondItem="cA8-I5-vw4" secondAttribute="leading" constant="20" id="5dD-W2-ayM"/>
+                        <constraint firstItem="0Jc-7m-vTT" firstAttribute="leading" secondItem="cA8-I5-vw4" secondAttribute="leading" constant="20" id="70f-z7-QS4"/>
+                        <constraint firstAttribute="trailing" secondItem="0Jc-7m-vTT" secondAttribute="trailing" constant="20" id="AIY-f7-Gdx"/>
+                        <constraint firstItem="JP7-If-2Oz" firstAttribute="top" secondItem="0Jc-7m-vTT" secondAttribute="bottom" constant="20" id="C8C-9C-QRq"/>
+                        <constraint firstAttribute="height" constant="210" id="Elr-cB-DjM"/>
+                        <constraint firstAttribute="trailing" secondItem="38o-pL-38B" secondAttribute="trailing" constant="20" id="QEN-lQ-yX2"/>
+                        <constraint firstItem="JP7-If-2Oz" firstAttribute="leading" secondItem="cA8-I5-vw4" secondAttribute="leading" constant="20" id="Vf3-kl-G4Y"/>
+                        <constraint firstItem="0Jc-7m-vTT" firstAttribute="top" secondItem="cA8-I5-vw4" secondAttribute="top" constant="20" id="aMZ-s6-gk3"/>
+                        <constraint firstAttribute="bottom" secondItem="38o-pL-38B" secondAttribute="bottom" constant="20" id="fYY-b1-fab"/>
+                        <constraint firstAttribute="trailing" secondItem="JP7-If-2Oz" secondAttribute="trailing" constant="20" id="tMz-sp-zRw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.89674335719999998" green="0.91253262759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cA8-I5-vw4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2cg-Gd-Jra"/>
+                <constraint firstItem="cA8-I5-vw4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="220" id="qai-X5-2E6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cA8-I5-vw4" secondAttribute="trailing" constant="20" id="stf-EK-HQM"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="118"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
