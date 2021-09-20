@@ -19,6 +19,11 @@ class HomeViewController: UIViewController {
     
         
         //MARK: - Actions
+        @IBAction func handlerButtonStarGame(_ sender: Any) {
+            let viewController = QuestionViewController()
+            
+            navigationController?.pushViewController(viewController, animated: true)
+    }
         //toDo - add button action to questions
         
         //MARK: - Overrides
