@@ -191,7 +191,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2ADB49B826F7737900F9ABE3 /* Build configuration list for PBXProject "Desafio_UseAcademy_1" */;
+			buildConfigurationList = 2ADB49B826F7737900F9ABE3 /* Build configuration list for PBXProject "Desafio_" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -377,7 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U3U9YAKAC;
 				INFOPLIST_FILE = Desafio_UseAcademy_1/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -397,7 +397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U3U9YAKAC;
 				INFOPLIST_FILE = Desafio_UseAcademy_1/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -412,7 +412,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2ADB49B826F7737900F9ABE3 /* Build configuration list for PBXProject "Desafio_UseAcademy_1" */ = {
+		2ADB49B826F7737900F9ABE3 /* Build configuration list for PBXProject "Desafio_" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2ADB49CF26F7737A00F9ABE3 /* Debug */,
