@@ -39,7 +39,7 @@ class HomeViewController: UIViewController {
                                                                                 AnswerModel(name: "Assim você me mata", style: .blank),
                                                                                 AnswerModel(name: "Eu dormi na praça", style: .blank)],
                                                                             answerCorrect: 1)
-        let question5 =  QuestionModel(quiz: "Ano passado eu morri, qual o plano para este ano?", answer: [
+        let question5 =  QuestionModel(quiz: "Ano passado eu morri. Qual o plano para este ano?", answer: [
                                                                                 AnswerModel(name: "Não morrer", style: .blank),
                                                                                 AnswerModel(name: "Não matar", style: .blank),
                                                                                 AnswerModel(name: "Não roubar", style: .blank),
@@ -59,28 +59,28 @@ class HomeViewController: UIViewController {
                                                                                 AnswerModel(name: "Pudim", style: .blank),
                                                                                 AnswerModel(name: "Pavê", style: .blank)
                                                                             ],
-                                                                            answerCorrect: 3)
-        let question8 =  QuestionModel(quiz: "Se não era amor, o que era?", answer: [
-                                                                                AnswerModel(name: "paixão", style: .blank),
-                                                                                AnswerModel(name: "ódio", style: .blank),
-                                                                                AnswerModel(name: "ranço", style: .blank),
-                                                                                AnswerModel(name: "cilada, Bino", style: .blank)
+                                                                            answerCorrect: 1)
+        let question8 =  QuestionModel(quiz: "Quando o mel é bom...", answer: [
+                                                                                AnswerModel(name: "...custa caro", style: .blank),
+                                                                                AnswerModel(name: "...a gente se lambuza", style: .blank),
+                                                                                AnswerModel(name: "...a abelha sempre volta", style: .blank),
+                                                                                AnswerModel(name: "...a gente come", style: .blank)
                                                                             ],
-                                                                            answerCorrect: 3)
-        let question9 =  QuestionModel(quiz: "Se não era amor, o que era?", answer: [
-                                                                                AnswerModel(name: "paixão", style: .blank),
-                                                                                AnswerModel(name: "ódio", style: .blank),
-                                                                                AnswerModel(name: "ranço", style: .blank),
-                                                                                AnswerModel(name: "cilada, Bino", style: .blank)
+                                                                            answerCorrect: 2)
+        let question9 =  QuestionModel(quiz: "Qual era a cor da brasília amarela dos Mamonas Assasinas?", answer: [
+                                                                                AnswerModel(name: "Verde", style: .blank),
+                                                                                AnswerModel(name: "Amarela", style: .blank),
+                                                                                AnswerModel(name: "Azul", style: .blank),
+                                                                                AnswerModel(name: "Rosa", style: .blank)
                                                                             ],
-                                                                            answerCorrect: 3)
-        let question10 =  QuestionModel(quiz: "Se não era amor, o que era?", answer: [
-                                                                                AnswerModel(name: "paixão", style: .blank),
-                                                                                AnswerModel(name: "ódio", style: .blank),
-                                                                                AnswerModel(name: "ranço", style: .blank),
-                                                                                AnswerModel(name: "cilada, Bino", style: .blank)
+                                                                            answerCorrect: 1)
+        let question10 =  QuestionModel(quiz: "Eu vacilei na primeira regra do rolê (de novo). Qual erro eu cometi?", answer: [
+                                                                                AnswerModel(name: "Liguei pra você", style: .blank),
+                                                                                AnswerModel(name: "Perdi o celular", style: .blank),
+                                                                                AnswerModel(name: "Pedi pra tocar 'Raul'", style: .blank),
+                                                                                AnswerModel(name: "Dei P.T.", style: .blank)
                                                                             ],
-                                                                            answerCorrect: 3)
+                                                                            answerCorrect: 0)
     
         lazy var questions: [QuestionModel] = [
                 question1,

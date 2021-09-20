@@ -43,19 +43,17 @@ class ResultViewController: UIViewController {
         title = "Perguntas e respostas"
         setupUI()
         resultDisplayLabel.text = "\(countCorrects)/\(total) Acertos"
+        navigationItem.hidesBackButton = true 
     }
     
     //MARK: - Methods
     func setupUI(){
-        func resultDisplayViewCornerRadius() {
-                resultDisplayView.layer.cornerRadius = 40
-        }
         let attributeTryAgainButton = NSMutableAttributedString(
                 string: "Tentar novamente",
                 attributes: tryAgainbuttonUnderline
         )
-                tryAgainLabel.setAttributedTitle(attributeTryAgainButton, for: .normal)
-    
+        tryAgainLabel.setAttributedTitle(attributeTryAgainButton, for: .normal)
+        resultDisplayView.layer.cornerRadius = 40
     }
     
 }

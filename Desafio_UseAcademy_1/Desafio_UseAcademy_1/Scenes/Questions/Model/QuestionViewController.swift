@@ -29,7 +29,6 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var questionLabelView: UILabel!
     @IBOutlet weak var AnswerButton: UIButton!
     
-    
     //MARK: - Actions
     @IBAction func handlerAnswerButton(_ sender: Any) {
         
@@ -64,8 +63,8 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
                 }
             }
             AlternativeTabelView.reloadData()
-            
             questions[indexQuestions].isAnswer = true
+            
             if indexQuestions < questions.count - 1 {
                 AnswerButton.setTitle("Próxima pergunta", for: .normal)
             } else {
@@ -73,8 +72,6 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
             }
         }
     }
-    
-    
     //MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,7 +87,7 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
         AlternativeTabelView.dataSource = self
         AlternativeTabelView.delegate = self
         AlternativeTabelView.reloadData()
-        answerButtonCornerRadius()
+        AnswerButton.layer.cornerRadius = 35
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -120,13 +117,7 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
         
         AnswerButton.isEnabled = true
         AnswerButton.backgroundColor = UIColor(red: 94/255, green: 130/255, blue: 249/255, alpha: 1)
-        
         tableView.reloadData()
-        
-       
-    }
-    func answerButtonCornerRadius() {
-            AnswerButton.layer.cornerRadius = 35
     }
     func answerButtonDisable() {
         AnswerButton.isEnabled = false
