@@ -29,11 +29,17 @@ class HomeViewController: UIViewController {
         //MARK: - Overrides
         override func viewDidLoad() {
             super.viewDidLoad()
+            setupUI()
             welcomeViewCornerRadius()
             startButtonViewCornerRadius()
-            title = "Perguntas e respostas"
+            //title = "Perguntas e respostas"
     }
         //MARK: - Methods
+    private func setupUI() {
+        navigationController?.navigationBar.barTintColor = UIColor(red: 94/255, green: 130/255, blue: 249/255, alpha: 1)
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
         func welcomeViewCornerRadius() {
         welcomeView.layer.cornerRadius = 40
     }

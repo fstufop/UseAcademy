@@ -34,7 +34,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Respostas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKt-NI-xHi">
                             <rect key="frame" x="20" y="150" width="84" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                            <color key="textColor" red="0.45901137590000002" green="0.54837483170000001" blue="0.99963420629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.3753274083" green="0.3814707994" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -71,7 +71,6 @@
                     </state>
                     <connections>
                         <action selector="handlerAnswerButton:" destination="-1" eventType="touchUpInside" id="KdO-0c-vvI"/>
-                        <action selector="handlerSetTitleButton:" destination="-1" eventType="touchUpInside" id="Rd4-bL-dgv"/>
                     </connections>
                 </button>
             </subviews>

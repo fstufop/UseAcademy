@@ -9,25 +9,22 @@ import Foundation
 
 
 //MARK: - Properties
-class QuestionModel {
-    let question: String
-    let answer: [String]
+struct QuestionModel {
+    var quiz: String
+    var answer: [AnswerModel]
     let answerCorrect: Int
+    var isAnswer: Bool = false
     
-    init(question: String, answer: [String], answerCorrect: Int){
-        self.question = question
-        self.answer = answer
-        self.answerCorrect = answerCorrect
-    }
 }
-
-//MARK: - Outlets
-
-//MARK: - Actions
-
-
-//MARK: - Overrides
-
-
-//MARK: - Methods
+struct AnswerModel {
+    enum Style {
+        case blank
+        case selected
+        case correct
+        case incorrect
+    }
     
+    var name: String
+    var style: Style
+    
+}
