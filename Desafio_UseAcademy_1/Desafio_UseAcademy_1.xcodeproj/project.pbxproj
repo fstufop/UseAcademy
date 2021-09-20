@@ -106,51 +106,19 @@
 		2ADB49DE26F7779800F9ABE3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				2ADB49E226F777C800F9ABE3 /* Model */,
-				2ADB49E126F777BD00F9ABE3 /* View */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		2ADB49E126F777BD00F9ABE3 /* View */ = {
-			isa = PBXGroup;
-			children = (
+				2ADB49E326F777DB00F9ABE3 /* HomeViewController.swift */,
 				2ADB49E426F777DB00F9ABE3 /* HomeViewController.xib */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		2ADB49E226F777C800F9ABE3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2ADB49E326F777DB00F9ABE3 /* HomeViewController.swift */,
-			);
-			path = Model;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		2ADB49EE26F78C9600F9ABE3 /* Result */ = {
 			isa = PBXGroup;
 			children = (
-				2ADB49EF26F78C9600F9ABE3 /* Model */,
-				2ADB49F126F78C9600F9ABE3 /* View */,
-			);
-			path = Result;
-			sourceTree = "<group>";
-		};
-		2ADB49EF26F78C9600F9ABE3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
+				2ADB49F226F78C9600F9ABE3 /* ResultViewController.xib */,
 				2ADB49F026F78C9600F9ABE3 /* ResultViewController.swift */,
 			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		2ADB49F126F78C9600F9ABE3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2ADB49F226F78C9600F9ABE3 /* ResultViewController.xib */,
-			);
-			path = View;
+			path = Result;
 			sourceTree = "<group>";
 		};
 		2ADB49F526F78D9700F9ABE3 /* Questions */ = {

@@ -12,13 +12,17 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
 
     
     //MARK: - Properties
-    var questions: [QuestionModel] = []
-    var question = QuestionModel(quiz: "Se não era amor, o que era?", answer: [AnswerModel(name: "paixão", style: .blank),
-                                                                                AnswerModel(name: "ódio", style: .blank),
-                                                                                AnswerModel(name: "ranço", style: .blank),
-                                                                                AnswerModel(name: "cilada, Bino", style: .blank)],
-                                                                        answerCorrect: 3)
+    var questions: [QuestionModel]
+    var indexQuestions: Int = 0
+    var countCorrectAnswer: Int = 0
+    init(questions: [QuestionModel]) {
+        self.questions = questions
+        super.init(nibName: nil, bundle: nil)
+    }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     //MARK: - Outlets
     @IBOutlet weak var AlternativeTabelView: UITableView!
@@ -29,49 +33,59 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
     //MARK: - Actions
     @IBAction func handlerAnswerButton(_ sender: Any) {
         
-        if question.isAnswer {
+        if questions[indexQuestions].isAnswer {
+            indexQuestions += 1
+            if indexQuestions < questions.count {
+                questionLabelView.text = questions[indexQuestions].quiz
+                AlternativeTabelView.reloadData()
+                answerButtonDisable()
+            } else {
+                
+                let viewController = ResultViewController(countCorrects: countCorrectAnswer, total: questions.count)
+                navigationController?.pushViewController(viewController, animated: true)
+            }
             
+          
         }
         else{
         
-            for indexAnswer in 0..<question.answer.count {
-                if indexAnswer == question.answerCorrect {
-                question.answer[indexAnswer].style = .correct
+            for indexAnswer in 0..<questions[indexQuestions].answer.count {
+                
+                if indexAnswer == questions[indexQuestions].answerCorrect {
+                    if questions[indexQuestions].answer[indexAnswer].style == .selected {
+                        countCorrectAnswer += 1
+                    }
+                    print(countCorrectAnswer)
+                    questions[indexQuestions].answer[indexAnswer].style = .correct
+                   
                 }
-                else if question.answer[indexAnswer].style == .selected {
-                question.answer[indexAnswer].style = .incorrect
+                else if questions[indexQuestions].answer[indexAnswer].style == .selected {
+                    questions[indexQuestions].answer[indexAnswer].style = .incorrect
                 }
             }
             AlternativeTabelView.reloadData()
             
-            question.isAnswer = true
-            AnswerButton.setTitle("Próxima pergunta", for: .normal)
+            questions[indexQuestions].isAnswer = true
+            if indexQuestions < questions.count - 1 {
+                AnswerButton.setTitle("Próxima pergunta", for: .normal)
+            } else {
+                AnswerButton.setTitle("Ver Resultado", for: .normal)
+            }
         }
     }
-    //let viewController = HomeViewController()
-    // navigationController?.pushViewController(viewController, animated: true)
-  
     
     
     //MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-       
-        
-        //Questions List
-       // question = QuestionModel(quiz: "Se não era amor, o que era?", answer: ["paixão", "ódio", "ranço", "cilada, Bino"], answerCorrect: 3)
-       // questions.append (question)
-        //question = QuestionModel(quiz: "O Luiz Carlos do Raça Negra está com um problema. Ele precisa de ajuda para segurar", answer: ["A calça que está caindo", "O forninho", "Essa barra que é gostar de você", "As pontas"], answerCorrect: 2)
-       // questions.append (question)
+        navigationItem.backBarButtonItem?.title = nil
     }
     //MARK: - Methods
     func setupUI() {
-        AnswerButton.isEnabled = false
-        AnswerButton.backgroundColor = .gray
-        
+        answerButtonDisable()
         title = "Perguntas e respostas"
-        questionLabelView.text = question.quiz
+        questionLabelView.text = questions[indexQuestions].quiz
         AlternativeTabelView.register(UINib(nibName: "AnswerCell", bundle: nil), forCellReuseIdentifier: "AnswerCell")
         AlternativeTabelView.dataSource = self
         AlternativeTabelView.delegate = self
@@ -80,11 +94,11 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return question.answer.count
+        return questions[indexQuestions].answer.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let answer = question.answer[indexPath.row]
+        let answer = questions[indexQuestions].answer[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerCell") as? AnswerCell {
             cell.setup(model: answer)
@@ -93,20 +107,20 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
         
         return UITableViewCell()
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if question.isAnswer {
+        if questions[indexQuestions].isAnswer {
             return
         }
         
         
-        for indexAnswer in 0..<question.answer.count {
-            question.answer[indexAnswer].style = indexAnswer == indexPath.row ? .selected : .blank
-            //if question.isAnswer {
-               
-            //}
+        for indexAnswer in 0..<questions[indexQuestions].answer.count {
+            questions[indexQuestions].answer[indexAnswer].style = indexAnswer == indexPath.row ? .selected : .blank
         }
+        
         AnswerButton.isEnabled = true
         AnswerButton.backgroundColor = UIColor(red: 94/255, green: 130/255, blue: 249/255, alpha: 1)
+        
         tableView.reloadData()
         
        
@@ -114,4 +128,10 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
     func answerButtonCornerRadius() {
             AnswerButton.layer.cornerRadius = 35
     }
+    func answerButtonDisable() {
+        AnswerButton.isEnabled = false
+        AnswerButton.backgroundColor = .gray
+        AnswerButton.setTitle("Responder", for: .normal)
+    }
+    
 }

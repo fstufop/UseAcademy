@@ -21,8 +21,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBs-bv-aVv">
                         <rect key="frame" x="20" y="0.0" width="280" height="80"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHq-E3-RGq">
-                                <rect key="frame" x="116" y="28" width="48" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHq-E3-RGq">
+                                <rect key="frame" x="20" y="28" width="240" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -31,8 +31,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KHq-E3-RGq" firstAttribute="centerX" secondItem="EBs-bv-aVv" secondAttribute="centerX" id="4Ly-P0-i4k"/>
+                            <constraint firstAttribute="trailing" secondItem="KHq-E3-RGq" secondAttribute="trailing" constant="20" id="4l3-vp-j6L"/>
                             <constraint firstAttribute="height" constant="80" id="CCP-Ld-p0i"/>
                             <constraint firstItem="KHq-E3-RGq" firstAttribute="centerY" secondItem="EBs-bv-aVv" secondAttribute="centerY" id="WYv-eZ-FW0"/>
+                            <constraint firstItem="KHq-E3-RGq" firstAttribute="leading" secondItem="EBs-bv-aVv" secondAttribute="leading" constant="20" id="bZP-7m-yBz"/>
                         </constraints>
                     </view>
                 </subviews>

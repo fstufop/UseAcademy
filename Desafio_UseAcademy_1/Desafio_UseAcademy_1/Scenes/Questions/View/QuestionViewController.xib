@@ -26,7 +26,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="200"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pergunta" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivm-sa-Tvj">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                            <rect key="frame" x="20" y="0.0" width="374" height="200"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -42,12 +42,12 @@
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="dKt-NI-xHi" secondAttribute="bottom" constant="20" id="0h6-U6-3CG"/>
                         <constraint firstAttribute="bottom" secondItem="ivm-sa-Tvj" secondAttribute="bottom" id="4mP-1I-de0"/>
-                        <constraint firstAttribute="trailing" secondItem="ivm-sa-Tvj" secondAttribute="trailing" id="BlR-Xf-H2g"/>
+                        <constraint firstAttribute="trailing" secondItem="ivm-sa-Tvj" secondAttribute="trailing" constant="20" id="BlR-Xf-H2g"/>
                         <constraint firstItem="ivm-sa-Tvj" firstAttribute="top" secondItem="OpO-bI-2e3" secondAttribute="top" id="DEU-U3-GtL"/>
                         <constraint firstAttribute="height" constant="200" id="DyB-nz-CI6"/>
                         <constraint firstAttribute="trailing" secondItem="dKt-NI-xHi" secondAttribute="trailing" constant="310" id="Skv-jf-4E0"/>
                         <constraint firstItem="dKt-NI-xHi" firstAttribute="top" secondItem="OpO-bI-2e3" secondAttribute="top" constant="150" id="Xx2-ez-3tq"/>
-                        <constraint firstItem="ivm-sa-Tvj" firstAttribute="leading" secondItem="OpO-bI-2e3" secondAttribute="leading" id="uLg-ry-LHY"/>
+                        <constraint firstItem="ivm-sa-Tvj" firstAttribute="leading" secondItem="OpO-bI-2e3" secondAttribute="leading" constant="20" id="uLg-ry-LHY"/>
                         <constraint firstItem="dKt-NI-xHi" firstAttribute="leading" secondItem="OpO-bI-2e3" secondAttribute="leading" constant="20" id="vRr-02-9Eb"/>
                     </constraints>
                 </view>

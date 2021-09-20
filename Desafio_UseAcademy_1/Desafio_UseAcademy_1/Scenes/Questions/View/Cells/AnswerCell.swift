@@ -38,7 +38,7 @@ class AnswerCell: UITableViewCell {
         case .blank:
             alternativeViewBackgound.backgroundColor = .white
             alternativeViewBackgound.layer.borderColor = UIColor.gray.cgColor
-      
+            alternativeLabel.textColor = .black
         case .selected:
             alternativeViewBackgound.backgroundColor = UIColor.init(red: 117/255, green: 140/255, blue: 255/255, alpha: 0.2)
             alternativeViewBackgound.layer.borderColor = UIColor.blue.cgColor
