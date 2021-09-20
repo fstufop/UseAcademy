@@ -1,6 +1,10 @@
 # Desafio 1 UseAcademy - App Perguntas e respostas❓
 
-<img src="exemplo-image.png" alt="exemplo imagem">
+![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
 > Este projeto é o primeiro desafio proposto no BootCamp da Usemobile. A ideia é reclicar as telas apresentadas de maneira fiel e implementar as funcionalidades porpostas
 Este App testa os seus conhecimentos musicais em 10 perguntas que irão avaliar o quão eclético é o seu gosto musical 🎼. Vamos ver se você tem referência 🤔.
